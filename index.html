@@ -62,10 +62,10 @@ select{width:100%;border:3px solid #73c7b5;background:#f3fffb;border-radius:15px
 </div>
 <div id="confetti" class="confetti"></div>
 <script>
-const DEFAULTS=["便當","壽司","拉麵","炒飯","雞肉飯","肉羹麵","餛飩麵","隨便青菜","雞排"];
+const DEFAULTS=["便當","拉麵","壽司","火鍋","鐵板燒","餛飩麵","炒飯","麥當勞","MOS","鍋貼","雞排","烏龍麵","隨便青菜"];
 const DEFAULT_MENUS={
  "🍱 午餐":DEFAULTS,
- "🍰 下午茶":["蛋糕","餅乾","鬆餅","奶茶","咖啡","冰淇淋"]
+ "🍰 下午茶":["星巴克","雞排","鹹酥雞","烤串","蛋糕","地瓜球","紅豆餅","鹹水雞","水煎包","蔥抓餅","剉冰","豆花","餅乾","麵包","自己搞"]
 };
 let menus=JSON.parse(localStorage.getItem("todayEatMenus")||"null")||Object.fromEntries(Object.entries(DEFAULT_MENUS).map(([k,v])=>[k,v.slice()])),current=localStorage.getItem("todayEatCurrent")||Object.keys(menus)[0],rotation=0,spinning=false;
 if(!menus[current])current=Object.keys(menus)[0];
